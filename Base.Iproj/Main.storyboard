@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DiceApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="WPj-gl-umz">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="J5H-cG-Bf0">
+                                <rect key="frame" x="36" y="209.33333333333334" width="318" height="425.33333333333326"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DiceApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icH-n9-ezc">
+                                        <rect key="frame" x="0.0" y="0.0" width="318" height="44.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="36"/>
+                                        <color key="textColor" red="0.086274509803921567" green="0.12941176470588234" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="Amc-6n-1ge">
+                                        <rect key="frame" x="0.0" y="144.33333333333334" width="318" height="141.00000000000003"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-2" translatesAutoresizingMaskIntoConstraints="NO" id="s7e-hP-QNd">
+                                                <rect key="frame" x="0.0" y="0.0" width="141" height="141"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="s7e-hP-QNd" secondAttribute="height" multiplier="1:1" id="Udd-a9-agd"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-6" translatesAutoresizingMaskIntoConstraints="NO" id="pW2-hK-OSz">
+                                                <rect key="frame" x="177" y="0.0" width="141" height="141"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTH-ZB-yDe">
+                                        <rect key="frame" x="0.0" y="385.33333333333326" width="318" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="63v-TJ-fIn"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Бросить">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.086274509803921567" green="0.12941176470588234" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="throwButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sxl-9l-nR7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="WPj-gl-umz" secondAttribute="bottom" id="3kr-Mz-81g"/>
+                            <constraint firstItem="J5H-cG-Bf0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="36" id="Iml-l7-skD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J5H-cG-Bf0" secondAttribute="trailing" constant="36" id="R9E-9H-u97"/>
+                            <constraint firstItem="J5H-cG-Bf0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qa2-u4-zic"/>
+                            <constraint firstItem="WPj-gl-umz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wEX-BP-yTn"/>
+                            <constraint firstItem="WPj-gl-umz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xDN-Qv-1qN"/>
+                            <constraint firstItem="WPj-gl-umz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zaQ-FA-Jy4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="diceImageView1" destination="s7e-hP-QNd" id="jCB-tp-1vf"/>
+                        <outlet property="diceImageView2" destination="pW2-hK-OSz" id="biI-Qi-cHY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111.59420289855073" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="428" height="926"/>
+        <image name="dice-2" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="dice-6" width="85.333335876464844" height="85.333335876464844"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
